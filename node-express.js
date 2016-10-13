@@ -14,12 +14,19 @@ app.get("/",function(request,response){
 	response.send("hola");
 });
 console.log("Servidor escuchando en "+host+":"+port);
+// 127.0.0.1:1337
 app.listen(port,host);
 */
 
+// Respuesta: Servidor escuchando en 127.0.0.1:1337
+
+
 //2- Devolver la cadena indicada en la url con
 //este formato /hola/juanito
+
+
 /*
+
 var fs=require("fs");
 var config=JSON.parse(fs.readFileSync("config.json"));
 var host=config.host;
@@ -39,6 +46,11 @@ app.get("/hola/:text",function(request,response){
 console.log("Servidor escuchando en "+host+":"+port);
 app.listen(port,host);
 */
+
+// Respuesta: Hola Juanito
+
+
+
 
 //3-Devolver los valores según un parámetro indicado
 //en la url
@@ -83,3 +95,10 @@ app.get("/user/:id",function(request,response){
 })
 app.listen(port,host);
 */
+
+// url: http://127.0.0.1:1337/user/1.  respuesta: Usuario: Pepe Lopez cuenta: @pepe
+// url: http://127.0.0.1:1337/user/2.  respuesta: Usuario: Juan Perez cuenta: @juan
+// url: http://127.0.0.1:1337/user/2.  respuesta: usuario no existe
+// url: http://127.0.0.1:1337.  respuesta: hola
+// url: http://127.0.0.1:1337/luis.  Cannot GET /luis
+
